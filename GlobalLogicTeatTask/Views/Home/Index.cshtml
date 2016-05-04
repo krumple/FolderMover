@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "";
+}
+@Styles.Render("~/Content/css")
+
+<div class="container">
+
+    <div class="container row">
+        @using (Html.BeginForm("Move", "Home", FormMethod.Post))
+        {
+
+              <label class="col-sm-2">Move folder from</label>
+              <input class="col-sm-3" type="text" name="startPath" placeholder="Input path" />
+              <label class="col-sm-1">to</label>
+              <input class="col-sm-3" type="text" name="extractPath" placeholder="Input path" />
+              <input type="submit" class="col-lg-offset-1 col-sm-2" value="Move" />
+
+        }
+    </div>
+</div>
